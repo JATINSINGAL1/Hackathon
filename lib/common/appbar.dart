@@ -11,7 +11,7 @@ class CAppbar extends StatelessWidget {
     return AppBar(
       title: GradientText(
         'ARtistry',
-        style: GoogleFonts.hubballi(),
+        style: GoogleFonts.hubballi(fontSize: 32),
         gradientType: GradientType.radial,
         radius: 2.5,
         colors: const[
@@ -20,7 +20,7 @@ class CAppbar extends StatelessWidget {
           
         ],
       ),
-      actions: [const Icon(Icons.account_circle_outlined)],
+      actions: [const Icon(Icons.account_circle_outlined,size: 32,)],
     );
   }
 }

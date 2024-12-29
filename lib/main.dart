@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:xyz/advance_page.dart';
 import 'package:xyz/common/appbar.dart';
 import 'package:xyz/common/maintile.dart';
-import 'package:xyz/page2.dart';
+import 'package:xyz/beginnerpage.dart';
 
 import 'text.dart';
 
@@ -22,7 +23,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home:  Home(),
+      home: Home(),
     );
   }
 }
@@ -33,7 +34,6 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-       
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 20),
         child: Column(
@@ -64,20 +64,39 @@ class Home extends StatelessWidget {
               height: 20,
             ),
             GestureDetector(
-              onTap: (){
-                Navigator.push(context, MaterialPageRoute(builder: (context) =>  JsonExample(),));
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => BeginnerPage(),
+                    ));
               },
               child: Maintile(
                 discription: text1,
                 text: title1,
                 image: image1,
               ),
-            ),SizedBox(height: 10,),
-            Maintile(
-              discription: text2,
-              text: title2,
-              image: image2,
-            ),SizedBox(height: 10,),
+            ),
+            SizedBox(
+              height: 10,
+            ),
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => Advancepage(),
+                    ));
+              },
+              child: Maintile(
+                discription: text2,
+                text: title2,
+                image: image2,
+              ),
+            ),
+            SizedBox(
+              height: 10,
+            ),
             Maintile(
               discription: text3,
               text: title3,
